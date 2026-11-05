@@ -12,8 +12,10 @@ import {
   aboutText,
   langs,
   pagePath,
+  pageRoute,
   productDescription,
   productPath,
+  productRoute,
   productTitle,
   products,
   routes,
@@ -36,9 +38,9 @@ export const getStaticPaths = (() => {
   return langs.flatMap((lang) => [
     ...(Object.keys(routes[lang]) as PageKey[])
       .filter((page) => page === 'home' || routes[lang][page])
-      .map((page) => ({ params: { slug: toSlug(pagePath(lang, page)) }, props: { lang, page } })),
+      .map((page) => ({ params: { slug: toSlug(pageRoute(lang, page)) }, props: { lang, page } })),
     ...products.map((product) => ({
-      params: { slug: toSlug(productPath(lang, product.slug)) },
+      params: { slug: toSlug(productRoute(lang, product.slug)) },
       props: { lang, page: 'product' as const, product },
     })),
   ]);

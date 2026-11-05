@@ -27,14 +27,22 @@ export const routes: Record<Lang, Record<PageKey, string | null>> = {
 
 const prefix = (lang: Lang) => (lang === defaultLang ? '' : `/${lang}`);
 
-export function pagePath(lang: Lang, page: PageKey): string {
+/** Deployment base path (e.g. "/yacht-service" on GitHub Pages, "" on a custom domain). */
+export const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+/** Route of a page relative to the site root, as Astro expects it in getStaticPaths. */
+export function pageRoute(lang: Lang, page: PageKey): string {
   const segment = routes[lang][page];
   return segment ? `${prefix(lang)}/${segment}/` : `${prefix(lang)}/`;
 }
 
-export function productPath(lang: Lang, slug: string): string {
+export function productRoute(lang: Lang, slug: string): string {
   return `${prefix(lang)}/${routes[lang].products}/${slug}/`;
 }
+
+/** Public URL paths include the deployment base. */
+export const pagePath = (lang: Lang, page: PageKey) => base + pageRoute(lang, page);
+export const productPath = (lang: Lang, slug: string) => base + productRoute(lang, slug);
 
 export function categoryPath(lang: Lang, category: Category): string {
   return `${pagePath(lang, 'products')}#${category}`;
