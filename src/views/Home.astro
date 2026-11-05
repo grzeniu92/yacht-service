@@ -1,0 +1,149 @@
+---
+import { Image } from 'astro:assets';
+import ProductList from '../components/ProductList.astro';
+import { aboutText, pagePath, partners, ui, type Lang } from '../i18n';
+import { photo } from '../lib/photos';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang];
+const about = aboutText[lang];
+---
+
+<section class="hero">
+  <Image src={photo('da-vinci-35-3.jpeg')} alt="DaVinci 35" widths={[900, 1400, 2000]} sizes="100vw" loading="eager" />
+  <div class="wrap copy">
+    <h1>{t.footerTagline}</h1>
+    <a class="btn" href={pagePath(lang, 'products')}>{t.ourProducts}</a>
+  </div>
+</section>
+
+<section class="section intro">
+  <div class="wrap">
+    <p class="lead">{about.paragraphs[0]}</p>
+    <p class="more"><a href={pagePath(lang, 'about')}>{t.nav.about}</a></p>
+  </div>
+</section>
+
+<section class="fleet">
+  <div class="wrap">
+    <ProductList lang={lang} />
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap partners">
+    <div>
+      <h2>{t.partnersTitle}</h2>
+      <p>{t.partnersIntro}</p>
+    </div>
+    <ul>
+      {
+        partners.map((p) => (
+          <li>
+            <a href={p.url} target="_blank" rel="noopener" aria-label={p.name}>
+              <Image src={photo(p.logo)} alt={p.name} height={56} densities={[1, 2]} class:list={{ mono: p.mono }} />
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    height: min(86vh, 800px);
+    min-height: 480px;
+    overflow: hidden;
+    color: var(--white);
+  }
+  .hero > :global(img) {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 60% 78%;
+  }
+  /* Only the sky behind the headline is darkened a touch, so the white lettering holds. */
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgb(22 24 70 / 38%), transparent 48%);
+  }
+  .copy {
+    position: relative;
+    z-index: 1;
+    padding-top: clamp(2.5rem, 7vw, 5.5rem);
+  }
+  .hero h1 {
+    color: var(--white);
+    max-width: 22ch;
+    text-wrap: balance;
+    font-size: clamp(2rem, 5.2vw, 4.4rem);
+    margin-bottom: 1.6rem;
+  }
+
+  .intro {
+    padding-bottom: 1.5rem;
+  }
+  .more {
+    margin: 0;
+    font-family: var(--font-ui);
+    font-weight: 700;
+  }
+
+  .fleet {
+    padding-top: 1rem;
+  }
+
+  .partners {
+    display: grid;
+    grid-template-columns: minmax(0, 300px) 1fr;
+    gap: clamp(1.5rem, 5vw, 5rem);
+    align-items: center;
+    border-top: 1px solid var(--line);
+    padding-top: 2.5rem;
+  }
+  .partners p {
+    color: var(--ink-soft);
+    font-size: 1rem;
+    max-width: 30ch;
+    margin: 0;
+  }
+  .partners ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 3.5rem;
+    align-items: center;
+  }
+  .partners a {
+    display: block;
+    opacity: 0.85;
+  }
+  .partners a:hover {
+    opacity: 1;
+  }
+  .partners :global(img.mono) {
+    filter: brightness(0);
+    opacity: 0.8;
+  }
+  .partners :global(img) {
+    height: 56px;
+    width: auto;
+    object-fit: contain;
+  }
+  @media (max-width: 800px) {
+    .partners {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

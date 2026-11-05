@@ -1,0 +1,91 @@
+---
+import { company, ui, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+
+<section class="page-head">
+  <div class="wrap">
+    <h1>{t.nav.contact}</h1>
+    <p class="lead">{t.contactIntro}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap layout">
+    <ul class="details">
+      <li>
+        <span>{t.phone}</span>
+        <a href={`tel:${company.phoneHref}`}>{company.phone}</a>
+      </li>
+      <li>
+        <span>{t.email}</span>
+        <a href={`mailto:${company.email}`}>{company.email}</a>
+      </li>
+      <li>
+        <span>{t.address}</span>
+        <address>{company.name}<br />{company.street}<br />{company.city}</address>
+      </li>
+      <li>
+        <span>{t.hours}</span>
+        {t.hoursValue}
+      </li>
+      <li><a class="btn" href={`mailto:${company.email}`}>{t.contactCta}</a></li>
+    </ul>
+    <iframe
+      title={company.name}
+      src={company.mapEmbed}
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen></iframe>
+  </div>
+</section>
+
+<style>
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 3.5rem;
+    align-items: stretch;
+  }
+  .details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 1.6rem;
+    align-content: start;
+  }
+  .details span {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--water-deep);
+    margin-bottom: 0.2rem;
+  }
+  .details a:not(.btn) {
+    font-family: var(--font-ui);
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  address {
+    font-style: normal;
+    font-size: 1.15rem;
+  }
+  iframe {
+    width: 100%;
+    min-height: 420px;
+    height: 100%;
+    border: 0;
+  }
+  @media (max-width: 900px) {
+    .layout {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

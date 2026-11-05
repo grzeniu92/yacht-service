@@ -1,0 +1,22 @@
+---
+import { company, subsidies } from '../i18n';
+---
+
+<section class="page-head">
+  <div class="wrap">
+    <h1>{subsidies.title}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap narrow">
+    <p class="lead">{subsidies.text}</p>
+    <p>{subsidies.contact}: <a href={`mailto:${company.projectEmail}`}>{company.projectEmail}</a></p>
+  </div>
+</section>
+
+<style>
+  .narrow {
+    max-width: 760px;
+  }
+</style>

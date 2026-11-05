@@ -1,0 +1,473 @@
+[
+  {
+    "slug": "raku-32",
+    "category": "catamaran",
+    "featured": "raku32.jpg",
+    "gallery": [
+      "raku32-1.jpg"
+    ],
+    "i18n": {
+      "pl": {
+        "title": "Raku 32",
+        "description": [
+          "Raku to 32 stopowy, nowoczesny katamaran o sportowym charakterze. Dwukadłubowiec, zaprojektowany przez Tony’ego Grainera zadowoli każdego, kto poszukuje jednostki z wysokimi osiągami. W ofercie posiadamy dwie wersje Raku 32 – sportową i turystyczną."
+        ],
+        "specs": []
+      },
+      "en": {
+        "title": "Raku 32",
+        "description": [
+          "Raku is a modern 32-foot catamaran with a sporty character. Designed by Tony Grainer, this twin-hull boat will satisfy anyone looking for a high-performance craft. We offer two versions of the Raku 32 – a sport version and a cruising version."
+        ],
+        "specs": []
+      },
+      "de": {
+        "title": "Raku 32",
+        "description": [
+          "Die Raku ist ein moderner 32-Fuß-Katamaran mit sportlichem Charakter. Der von Tony Grainer entworfene Zweirumpfer überzeugt jeden, der ein leistungsstarkes Boot sucht. Wir bieten die Raku 32 in zwei Versionen an – als Sport- und als Tourenversion."
+        ],
+        "specs": []
+      }
+    }
+  },
+  {
+    "slug": "laminaty-przemyslowe",
+    "category": "laminates",
+    "featured": "laminaty-1.jpg",
+    "gallery": [
+      "laminaty-3.jpg",
+      "laminaty-1.jpg",
+      "laminaty-2.jpg"
+    ],
+    "i18n": {
+      "pl": {
+        "title": "Laminaty przemysłowe",
+        "description": [
+          "Firma Yacht Service wykonała wiele zaawansowanych projektów przemysłowych, między innymi elementy elektrowni wiatrowych, oczyszczalni ścieków oraz różne części maszyn. Specjalizujemy się w realizacji produktów w technologii One-Off."
+        ],
+        "specs": []
+      },
+      "en": {
+        "title": "Industrial laminates",
+        "description": [
+          "The Yacht Service company made many advanced projects for industry. We built items for wind generators, waste water plants covers, machine parts. We specialize in realization out of One-Off technology."
+        ],
+        "specs": []
+      },
+      "de": {
+        "title": "Industrielaminate",
+        "description": [
+          "Unsere Firma Yacht Service hat viele technologisch fortgeschrittene Projekte realisiert. Dazu gehören z.B.: Teile der Windrädern, Kläranlagenbecken, Abdeck-Hauben der Industriemaschinen usw. Wir spezialisieren uns auch in den One-Off Verfahren."
+        ],
+        "specs": []
+      }
+    }
+  },
+  {
+    "slug": "davinci-32s",
+    "category": "motor",
+    "featured": "dv32s7.jpg",
+    "gallery": [
+      "dv32s6.jpg",
+      "dv32s7.jpg",
+      "dv32s1.jpg",
+      "dv32s12.jpg",
+      "dv32s3.jpg",
+      "dv32s9.jpg",
+      "dv32s5.jpg",
+      "dv32s2.jpg",
+      "dv32s8.jpg",
+      "dv32s13.jpg",
+      "dv32s14.jpg",
+      "dv32s10.jpg",
+      "dv32s4.jpg"
+    ],
+    "i18n": {
+      "pl": {
+        "title": "DaVinci 32s",
+        "description": [
+          "32-stopowy jacht motorowy. Tę jednostkę cechuje połączenie klasycznej linii oraz nowoczesnego designu. Napędzany jednym lub dwoma silnikami Volvo zapewnia niezapomniane wrażenia z pływania. Wnętrze wykończone jest eleganckim drewnem oraz wysokiej klasy materiałami. Jacht ten wyposażony jest w osobna kabinę z łazienką oraz kuchnie."
+        ],
+        "specs": []
+      },
+      "en": {
+        "title": "DaVinci 32s",
+        "description": [
+          "It is a thirty-two-foot long motorboat. This boat is characterized by a fusion of classical lines and a modern design. It is powered by one or two Volvo engines and it provides an unforgettable sailing experience. The interior has been finished with elegant wood and high-end fabrics. The yacht is equipped with a separate bathroom cabin and a kitchen."
+        ],
+        "specs": []
+      },
+      "de": {
+        "title": "DaVinci 32s",
+        "description": [
+          "Ein 32 Fuß Motorboot der klassischen Linie verbunden mit modernem Design. Der Volvo-Penta Antrieb garantiert unvergessliche Momente. Der Innenraum wird mir edlen Hölzer und modernen Stoffen ausgebaut. Eine Kombüse und eine separate Kabine mit Toilette gehören zum Standard."
+        ],
+        "specs": []
+      }
+    }
+  },
+  {
+    "slug": "davinci-35",
+    "category": "motor",
+    "featured": "da-vinci-35-2.jpeg",
+    "gallery": [
+      "da-vinci-35-4.jpeg",
+      "da-vinci-35-2.jpeg",
+      "da-vinci-35-9.jpeg",
+      "da-vinci-35-6.jpeg",
+      "da-vinci-35-7.jpeg",
+      "da-vinci-35-5.jpeg",
+      "da-vinci-35-1.jpeg",
+      "da-vinci-35-3.jpeg",
+      "da-vinci-35-8.jpeg"
+    ],
+    "i18n": {
+      "pl": {
+        "title": "DaVinci 35",
+        "description": [
+          "35-stopowy jacht motorowy. Jednostka ta idealnie sprawdzi się w każdych warunkach. Idealny jacht na godzinny wypad z całą rodzina jak i dalsze wycieczki. Posiada wnętrze wykonane z wysokiej jakości drewna. Posiada osobna kabinę z toaleta i kuchnię. Komfortowo mogą spać tutaj cztery osoby. Napędzany dwoma silnikami Volvo jest to prawdziwy wilk w owczej skórze."
+        ],
+        "specs": []
+      },
+      "en": {
+        "title": "DaVinci 35",
+        "description": [
+          "It is a thirty-five-foot long motorboat. This all-rounder will perform well in all conditions. It is just as perfect a yacht for a short excursion with the family as for longer trips. Its interior has been made from quality wood. It has a separate bathroom cabin and a kitchen."
+        ],
+        "specs": []
+      },
+      "de": {
+        "title": "DaVinci 35",
+        "description": [
+          "Die Da Vinci 35 ist ein idealer Allrounder. Kurze Ausflüge und lange Ferienfahrten sind seine Domäne. Der Innenraum wird mir edlen Hölzer und modernen Stoffen ausgebaut. Eine Kombüse und eine separate Kabine mit Toilette gehören zum Standard. Der Volvo-Penta Antrieb macht aus dem Boot einen echten Wolf im Schafspelz."
+        ],
+        "specs": []
+      }
+    }
+  },
+  {
+    "slug": "davinci-30",
+    "category": "motor",
+    "featured": "davinci-0.jpeg",
+    "gallery": [
+      "davinci-9.jpeg",
+      "davinci-1.jpeg",
+      "davinci-0.jpeg",
+      "davinci-4.jpeg",
+      "davinci-6.jpeg",
+      "davinci-2.jpeg",
+      "davinci-3.jpeg",
+      "davinci-8.jpeg",
+      "davinci-5.jpeg",
+      "davinci-7.jpeg"
+    ],
+    "i18n": {
+      "pl": {
+        "title": "DaVinci 30",
+        "description": [
+          "Trzydziestostopowy jacht motorowy. Posiadający sportowy charakter oraz ponadczasową linię. Idealny do pływania po jeziorach i rzekach. Posiada on wnętrze wykończone wysokiej jakości drewnem. Wyposażony jest w kuchnię oraz osobna kabinę z toaletą. Napędzany jest jednym lub dwoma silnikami Volvo D3 o mocy od 170 do 220 KM."
+        ],
+        "specs": []
+      },
+      "en": {
+        "title": "DaVinci 30",
+        "description": [
+          "Da Vinci 30 is a thirty-foot long motorboat. It has, at the same time, a modern character and an ageless line. The interior has been made out of high-quality wood. It has been equipped with a kitchen and a separate toilet-cabin. It is propelled by one or two Volvo D3 engines of 170-220 horsepower."
+        ],
+        "specs": []
+      },
+      "de": {
+        "title": "DaVinci 30",
+        "description": [
+          "Die Da Vincie 30 ist ein 30 Fuß Motorboot der Zeitlosen Eleganz. Die Binnengewässer sind sein Zuhause. Der Innenraum wird mir edlen Hölzer ausgebaut. Eine Kombüse und eine separate Kabine mit Toilette gehören zum Standardlayout. Als Antrieb stehen ein oder zwei Volvo D3 mit 170 bis 220 Ps. zur Verfügung."
+        ],
+        "specs": []
+      }
+    }
+  },
+  {
+    "slug": "vector-650",
+    "category": "sailing",
+    "featured": "vector-2-1.jpg",
+    "gallery": [
+      "vector-2-1.jpg",
+      "vector-3.jpg",
+      "vector-1-1.jpg",
+      "vector-6.jpg",
+      "vector-4.jpg",
+      "vector-5.jpg"
+    ],
+    "i18n": {
+      "pl": {
+        "title": "Vector 650",
+        "description": [
+          "Vector 650, to jacht żaglowy o długości 6,5 metra (21 stóp) przeznaczony do regat i rejsów morskich. Zaprojektowany przez francuskiego projektanta Etiennea Bertranda zgodnie z zasadami klasy MINI. Jednostka ta jest ucieleśnieniem sportowego charakteru oraz nowoczesnej myśli technicznej. Do budowy zostały wykorzystane najnowocześniejsze i najwyższej klasy materiały."
+        ],
+        "specs": []
+      },
+      "en": {
+        "title": "Vector 650",
+        "description": [
+          "Vector 650 is a 6.5 meter-long sailing boat, designed for racing and maritime sailing. It has been designed by the established French designer, Etienne Bertrand, in accordance with the MINI-class requirements. This unit embodies a sporty character and it is at the forefront of modern technological thought. It is constructed from the most modern, cutting-edge materials of highest quality."
+        ],
+        "specs": []
+      },
+      "de": {
+        "title": "Vector 650",
+        "description": [
+          "Eine echte Rennziege der mini-Transat Klasse, entworfen von dem Etienne Bertrand. Bei der Fertigung kommen nur die besten Werkstoffe zum Einsatz. Ein kleines, kompromissloses Regattaboot für echte Hardcore Segler."
+        ],
+        "specs": []
+      }
+    }
+  },
+  {
+    "slug": "sixfor4",
+    "category": "sailing",
+    "featured": "sixfor4-7.jpg",
+    "gallery": [
+      "sixfor4-11.jpg",
+      "sixfor4-3.jpg",
+      "sixfor4-17.jpg",
+      "sixfor4-4.jpg",
+      "sixfor4-1.jpg",
+      "sixfor4-8.jpg",
+      "sixfor4-10.jpg",
+      "sixfor4-15.jpg",
+      "sixfor4-12.jpg",
+      "sixfor4-9.jpg",
+      "sixfor4-13.jpg",
+      "sixfor4-7.jpg",
+      "sixfor4-2.jpg",
+      "sixfor4-5.jpg"
+    ],
+    "i18n": {
+      "pl": {
+        "title": "SiXfor4",
+        "description": [
+          "SiXfor4 to elegancki mały cruiser o nowoczesnym designie. Szeroka linia wodna, nisko położony środek ciężkości sprawiają, że SiXfor4 jest szczególnie bezpieczny i zapewnia dużą stabilność podczas żeglowania. Jacht jest również idealny do żeglugi jednoosobowej. Dzięki niewielkiej wadze i stosunkowo niewielkim wymiarom jednostkę tą, można łatwo przewozić na przyczepie. W kokpicie jest miejsce dla 4 osób na a pod pokładem SiXfor4 oferuje zaskakującą ilość komfortu i koje dla 4 osób."
+        ],
+        "specs": []
+      },
+      "en": {
+        "title": "SiXfor4",
+        "description": [
+          "SiXfor4 is an elegant small cruiser with a modern design. Its wide waterline and the low center of gravity render SiXfor4 as a particularly safe and stable yacht. It is also a great choice for lone sailors. Due to its low static weight and its relatively minute dimensions, this unit can be easily transported on a trailer. There is comfortable cockpit-room for four people and also remarkably much space and comfort under the deck (which incudes berths for four people)."
+        ],
+        "specs": []
+      },
+      "de": {
+        "title": "SiXfor4",
+        "description": [
+          "Die SiXfor4 ist ein eleganter Kleinkreuzer im modernen Design. Ihre breite Wasserlinie, der tiefliegende Schwerpunkt sowie das hohe aufrichtende Moment machen die SiXfor4 besonders sicher und sorgen für hohe Stabilität unter Segeln Das moderne Rigg, mit Fathead Großsegel und Rollfock und die durchdachte Beschlagsanordnung sorgen für hervorragende Segelleistung, einfache Handhabung und machen die SiXfor4 auch uneingeschränkt einhandtauglich Durch Ihr geringes Gewicht und die relativ kleine Abmessung lässt sich die SiXfor4 hervorragend trailern und kann auch von Kleinwagen gezogen werden. Im Cockpit finden spielend 4 Personen auf den langen Plichtbänken Platz und unter Deck bietet die SiXfor4 erstaunlich viel Komfort und Kojen für bis zu 4 Personen"
+        ],
+        "specs": []
+      }
+    }
+  },
+  {
+    "slug": "six",
+    "category": "sailing",
+    "featured": "six-18.jpg",
+    "gallery": [
+      "six-21.jpg",
+      "six-22.jpg",
+      "six-20.jpg",
+      "six-18.jpg",
+      "six-19.jpg",
+      "six-17.jpg",
+      "six-16.jpg",
+      "six-15.jpg",
+      "six-14.jpg",
+      "six-13.jpg"
+    ],
+    "i18n": {
+      "pl": {
+        "title": "SiX",
+        "description": [
+          "Przy budowie tego jachtu nacisk został położony całkowicie na maksymalną radość z żeglowania przy minimalnej wielkości łodzi. Łódź jest łatwa w transporcie po drogach i prosta w obsłudze podczas żeglowania, nawet dla osób mnie doświadczonych. Duży kokpit (samo odpływowy) o długości 3,30 m oferuje dużo miejsca dla załogi od 2 do 5 osób, dzięki czemu można nim optymalnie pływać w każdych warunkach."
+        ],
+        "specs": []
+      },
+      "en": {
+        "title": "SiX",
+        "description": [
+          "The idea underlying this yacht is to maximize the joy from sailing while minimizing the size. This boat is easy for land transport and it is just as easy to use while sailing, thus being a great choice for less experienced sailors. A big cockpit self-draining (of 3.30 m) offers a lot of space for a crew of 2-5 people, hence making this a great all-around choice."
+        ],
+        "specs": []
+      },
+      "de": {
+        "title": "SiX",
+        "description": [
+          "Bei der Konstruktion hat man die Akzente auf maximalen Spaß bei minimaler Länge gelegt. Das Boot ist gut transportabel und einfach zu segeln, auch für Unerfahrene. Ein riesiges Cockpit (3,30 m) bietet, für eine Mannschaft bis zu 5 Personen. viel Platz."
+        ],
+        "specs": []
+      }
+    }
+  },
+  {
+    "slug": "bente-39",
+    "category": "sailing",
+    "featured": "bente39_4.jpg",
+    "gallery": [
+      "bente39_1.jpg",
+      "bente39_6.jpg",
+      "bente39_5.jpg",
+      "bente39_4.jpg",
+      "bente39_3.jpg",
+      "bente39_2.jpg",
+      "bente39_10.jpg",
+      "bente39_9.jpg",
+      "bente39_8.jpg",
+      "bente39_7.jpg"
+    ],
+    "i18n": {
+      "pl": {
+        "title": "Bente 39",
+        "description": [
+          "BENTE39 – jest to jacht szybki, bezpieczny, stabilny, odpowiedni dla całej rodzin jak i jednego żeglarza. BENTE 39 łączy sportowe i jednocześnie bezpieczne żeglowanie jachtu BENTE24 z wysokim poziomem komfortu życia, dużą ilością miejsca, powietrza i światła. Wyposażenie całej łodzi może być wysoce zindywidualizowane dzięki podejściu semi-custom."
+        ],
+        "specs": []
+      },
+      "en": {
+        "title": "Bente 39",
+        "description": [
+          "It is a remarkably fast, safe and stable yacht- perfect for families and lone sailors. BENTE 39 offers a sporty yet safe sailing experience which goes together well with high comfort, loads of space, air and light. The boat is equipped in a semi-custom fashion, ensuring a highly individualized approach."
+        ],
+        "specs": []
+      },
+      "de": {
+        "title": "Bente 39",
+        "description": [
+          "Ein Segelboot der Extraklasse. Sehr sicher, stabil und schnell. Geeignet für die Crew wie auch Einhandsegeln. Die 39er verbindet die Sportlichkeit und Wendigkeit der 24er mit viel Comfort und einem Innenraum der 40 Fuß-Klasse. Der Ausbau kann weitgehend, nach Kundenwunsch, modifiziert werden."
+        ],
+        "specs": []
+      }
+    }
+  },
+  {
+    "slug": "bente-24",
+    "category": "sailing",
+    "featured": "BEN24_11.jpg",
+    "gallery": [
+      "BEN24_9.jpg",
+      "BEN24_4.jpg",
+      "BEN24_7.jpg",
+      "BEN24_2.jpg",
+      "BEN24_3.jpg",
+      "BEN24_11.jpg",
+      "BEN24_1.jpg",
+      "BEN24_8.jpg",
+      "BEN24_10.jpg",
+      "BEN24_5.jpg",
+      "BEN24_6.jpg"
+    ],
+    "i18n": {
+      "pl": {
+        "title": "Bente 24",
+        "description": [
+          "Łódź BENTE 24 jest wyjątkowa nie tylko pod względem wyglądu, ale także pod względem właściwości żeglarskich. BENTE24 pływa bezpiecznie, stabilnie i, jeśli chcesz, szybko. Dzięki bardzo zrównoważonym właściwościom konstrukcyjnym Judel / Vrolijk & Co., żegluje doskonale pod wiatr jak i na każdym innym kursie."
+        ],
+        "specs": []
+      },
+      "en": {
+        "title": "Bente 24",
+        "description": [
+          "BENTE 24 is an exceptional combination of remarkable looks and sailing features. BENTE 24 offers a safe and stable sailing experience, yet, if one shall desire, it can also be very quick. Due to balanced construction characteristics designed by Judel/Vrolijk&Co, it sails uniquely well against the wind- just as well as on any other course."
+        ],
+        "specs": []
+      },
+      "de": {
+        "title": "Bente 24",
+        "description": [
+          "Das Boot ist nicht nur optisch außergewöhnlich. Auch die nautischen Eigenschaften können sehr gut mithalten. Die Yacht segelt sehr stabil, sicher und wenn man es möchte und kann. Auch schnell. Die Eigenschaften kommen nicht von ungefähr da das Boot ist von Judel / Vrolijk & Co gezeichnet worden."
+        ],
+        "specs": []
+      }
+    }
+  },
+  {
+    "slug": "eagle-44",
+    "category": "sailing",
+    "featured": "eagle_44_2.jpg",
+    "gallery": [
+      "eagle_44_5.jpg",
+      "eagle_44_10.jpg",
+      "eagle_44_12.jpg",
+      "eagle_44_9.jpg",
+      "eagle_44_6.jpg",
+      "eagle_44_7.jpg",
+      "eagle_44_8.jpg",
+      "eagle_44_13.jpg",
+      "eagle_44_3.jpg",
+      "eagle_44_2.jpg",
+      "eagle_44_4.jpg",
+      "eagle_44_1.jpg"
+    ],
+    "i18n": {
+      "pl": {
+        "title": "Eagle 44",
+        "description": [
+          "Model Eagle 44 jest to jacht żaglowy typu daysailer. Zaprojektowany w Holandii posiada klasyczny wygląd lecz jest wykonany z nowoczesnych materiałów. Posiada koło sterowe wykonane z mahoniu oraz stali nierdzewnej, które zapewnia doskonałą sterowność oraz zwrotność podczas żeglowania. Dla ułatwienia obsługi, kabestany foka zostały usytuowane w zasięgu sternika. Tekowe siedziska, pokryte wysokiej jakości obiciem, zapewniają komfort żeglowania aż ośmiu osobom. Fenomenalna stabilność jachtu oraz łatwość obsługi są gwarancją bezpieczeństwa. Wnętrze jachtu jest wykonane z mahoniu. Sufit pokryty jest wysokiej jakości alcantarą."
+        ],
+        "specs": []
+      },
+      "en": {
+        "title": "Eagle 44",
+        "description": [
+          "The Eagle 44 Model is a typical daysailer. It was designed in the Netherlands and it has a classic look, yet it is constructed from modern materials. Its steering wheel has been made from mahogany and stainless steel which ensure an excellent steering experience underpinned by remarkable maneuverability. For the ease of use, the jib capstans have been located within reach of the helmsman. The teak seats, covered with high-end upholstery, can accommodate up to eight people. The interior of the yachts has been made from mahogany. The ceiling is covered with high-quality Alcantara."
+        ],
+        "specs": []
+      },
+      "de": {
+        "title": "Eagle 44",
+        "description": [
+          "Der Daysailer 44 ist in Holland gezeichnet worden. Die Linien sind sehr klassisch aber die Fertigung und die Werkstoffe sind durch modern. Das Steuerrad ist eine Kombination aus Mahagoni und Nirostahl. Um die Bedingung zu erleichtern sind die Fockwinschen nach am Steuerstand platziert. Die Teaksitzbänke sind komfortable gepolstert und bieten bis zu 8 Segler mehr als ausreichen Platz. Die außergewöhnliche Stabilität und sehr einfache Bedienung garantieren viel Sicherheit. Der Innenraum ist mit lackiertem Mahagoniholz ausgebaut, die Decke mit Alcantara verkleidet."
+        ],
+        "specs": []
+      }
+    }
+  },
+  {
+    "slug": "eagle-38",
+    "category": "sailing",
+    "featured": "Eagle_38_2.jpg",
+    "gallery": [
+      "Eagle_38_9.jpg",
+      "Eagle_38_2.jpg",
+      "Eagle_38_10.jpg",
+      "Eagle_38_7.jpg",
+      "Eagle_38_8.jpg",
+      "Eagle_38_5.jpg",
+      "Eagle_38_6.jpg",
+      "Eagle_38_1.jpg",
+      "Eagle_38_4.jpg",
+      "Eagle_38_11.jpg",
+      "Eagle_38_3.jpg"
+    ],
+    "i18n": {
+      "pl": {
+        "title": "Eagle 38",
+        "description": [
+          "Model 38 to połączenie elegancji z nowoczesnością. Linia podwodna w pełni realizuje innowacyjne rozwiązania projektowe. Prezentowana łódź to pełnowymiarowy daysailer, który w kokpicie wygodnie pomieści sześć osób. Dla ułatwienia obsługi, kabestany foka zostały usytuowane w zasięgu sternika. Kabestan fałowy jest umiejscowiony na nadbudówce oraz połączony z zamontowanym pod pokładem system zwijania foka. Wnętrze jachtu zostało wykończone lakierowanym mahoniem, a sufit kabiny pokryty jest alcantarą. Duża ilość światła słonecznego oraz ciepłych lamp LED stwarza poczucie luksusu oraz elegancji. Wnętrze oferuje miejsce do spania dla trzech osób oraz wygodną i schludną toaletę. Jacht można opcjonalnie wyposażyć w zlew oraz kuchenkę."
+        ],
+        "specs": []
+      },
+      "en": {
+        "title": "Eagle 38",
+        "description": [
+          "Model 38 is an expression of modern elegance. The underwater line implements a number of innovative design solutions. This boat is a full-size daysailer and it can comfortably accommodate up to six people in the cockpit. For the ease of use, the jib capstans have been located within reach of the helmsman. The halyard winch has been placed on the superstructure and connected to the roller system of the jib mounted below the deck.",
+          "The interior of the yacht is finished with lacquered mahogany and the ceiling is covered with Alcantara. The warm light of the led lamps, combined with large amounts of sunlight, create an ambience of elegance and luxury. The interior has space for three people to sleep comfortably and the toilet is convenient and neat. Optionally, the yacht may be equipped with a sink and a stove."
+        ],
+        "specs": []
+      },
+      "de": {
+        "title": "Eagle 38",
+        "description": [
+          "Die 38 stellt eine Verbindung zwischen Eleganz und Moderne dar. Die Unterwasserlinie realisiert vollkommen innovativer Entwurf. Die 38 ist ein L-Size Daysailer der im Cockpit locker Platz für bis zu 6 Personen bietet. Um die Bedingung zu erleichtern sind die Fockwinschen nach am Steuerstand platziert. Die Fallenwinsch dagegen befindet sich auf dem Aufbau und ist mir dem Fockroller verbunden. Der Innenraum ist mit lackiertem Mahagoniholz ausgebaut, die Decke mit Alcantara verkleidet. Viel Tageslicht plus warme LED-Beleuchtung vermitteln den Innenraum Luxus und Geborgenheit. Drei Schafplätze und ein WC Raum stehen der Mannschaft zur Verfügung. Optional ist auch eine Kombüse lieferbar."
+        ],
+        "specs": []
+      }
+    }
+  }
+]

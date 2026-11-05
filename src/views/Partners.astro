@@ -1,0 +1,90 @@
+---
+import { Image } from 'astro:assets';
+import { partners, ui, type Lang } from '../i18n';
+import { photo } from '../lib/photos';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+
+<section class="page-head">
+  <div class="wrap">
+    <h1>{t.nav.partners}</h1>
+    <p class="lead">{t.partnersIntro}</p>
+  </div>
+</section>
+
+<section class="wrap">
+  <ul class="list">
+    {
+      partners.map((p) => (
+        <li>
+          <a href={p.url} target="_blank" rel="noopener">
+            <Image src={photo(p.logo)} alt="" height={64} densities={[1, 2]} class:list={{ mono: p.mono }} />
+            <span class="name">{p.name}</span>
+            <span class="visit">{t.visit}</span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<style>
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--line);
+  }
+  li {
+    border-bottom: 1px solid var(--line);
+  }
+  a {
+    display: grid;
+    grid-template-columns: 220px 1fr auto;
+    align-items: center;
+    gap: 2rem;
+    padding-block: 1.5rem;
+    text-decoration: none;
+  }
+  a :global(img) {
+    height: 64px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+    object-position: left;
+  }
+  a :global(img.mono) {
+    filter: brightness(0);
+    opacity: 0.8;
+  }
+  .name {
+    font-family: var(--font-ui);
+    font-stretch: 125%;
+    font-weight: 800;
+    font-size: clamp(1.4rem, 3vw, 2.4rem);
+    text-transform: uppercase;
+    color: var(--indigo);
+  }
+  .visit {
+    font-family: var(--font-ui);
+    font-weight: 600;
+    color: var(--ink-soft);
+  }
+  a:hover .name {
+    color: var(--blue);
+  }
+  a:hover .visit {
+    text-decoration: underline;
+  }
+  @media (max-width: 700px) {
+    a {
+      grid-template-columns: 1fr;
+      gap: 0.6rem;
+    }
+  }
+</style>

@@ -1,0 +1,270 @@
+---
+import { Image, getImage } from 'astro:assets';
+import { categoryPath, pagePath, productDescription, productPath, productTitle, products, ui, type Lang, type Product } from '../i18n';
+import { photo } from '../lib/photos';
+
+interface Props {
+  lang: Lang;
+  product: Product;
+}
+const { lang, product } = Astro.props;
+const t = ui[lang];
+const title = productTitle(product, lang);
+const description = productDescription(product, lang);
+const gallery = [...new Set([product.featured, ...product.gallery])];
+const [cover, ...rest] = gallery;
+
+const lightboxSources = await Promise.all(gallery.map(async (name) => (await getImage({ src: photo(name), width: 1800 })).src));
+
+const index = products.findIndex((p) => p.slug === product.slug);
+const next = products[(index + 1) % products.length];
+---
+
+<section class="page-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href={pagePath(lang, 'products')}>{t.nav.products}</a> /
+      <a href={categoryPath(lang, product.category)}>{t.categories[product.category]}</a>
+    </nav>
+    <h1>{title}</h1>
+  </div>
+</section>
+
+<div class="cover">
+  <Image src={photo(cover)} alt={title} widths={[900, 1400, 2000]} sizes="100vw" loading="eager" />
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="text">
+      {description.map((p, i) => <p class:list={{ lead: i === 0 }}>{p}</p>)}
+      <a class="btn" href={pagePath(lang, 'contact')}>{t.contactCta}</a>
+    </div>
+  </div>
+</section>
+
+{
+  rest.length > 0 && (
+    <section class="gallery-section">
+      <div class="wrap">
+        <h2>{t.gallery}</h2>
+        <ul class="gallery">
+          {rest.map((name, i) => (
+            <li>
+              <button type="button" data-index={i + 1} aria-label={`${title} – ${i + 2}/${gallery.length}`}>
+                <Image src={photo(name)} alt="" widths={[400, 700, 1000]} sizes="(max-width: 700px) 100vw, 50vw" />
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )
+}
+
+<dialog id="lightbox" aria-label={title}>
+  <button type="button" class="lb-close" aria-label={t.close}>×</button>
+  <button type="button" class="lb-nav lb-prev" aria-label={t.prev}>‹</button>
+  <img alt="" />
+  <button type="button" class="lb-nav lb-next" aria-label={t.next}>›</button>
+</dialog>
+
+<script id="gallery-data" type="application/json" set:html={JSON.stringify(lightboxSources)} />
+
+<section class="next">
+  <div class="wrap">
+    <a href={productPath(lang, next.slug)}>
+      <span>{t.next}</span>
+      <strong>{productTitle(next, lang)}</strong>
+    </a>
+  </div>
+</section>
+
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('#lightbox')!;
+  const img = dialog.querySelector('img')!;
+  const sources: string[] = JSON.parse(document.querySelector('#gallery-data')!.textContent!);
+  let current = 0;
+
+  const show = (i: number) => {
+    current = (i + sources.length) % sources.length;
+    img.src = sources[current];
+  };
+  document.querySelectorAll<HTMLButtonElement>('.gallery button').forEach((button) =>
+    button.addEventListener('click', () => {
+      show(Number(button.dataset.index));
+      dialog.showModal();
+    }),
+  );
+  dialog.querySelector('.lb-close')!.addEventListener('click', () => dialog.close());
+  dialog.querySelector('.lb-prev')!.addEventListener('click', () => show(current - 1));
+  dialog.querySelector('.lb-next')!.addEventListener('click', () => show(current + 1));
+  dialog.addEventListener('click', (e) => e.target === dialog && dialog.close());
+  dialog.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+</script>
+
+<style>
+  .crumbs {
+    font-family: var(--font-ui);
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    margin-bottom: 1.2rem;
+  }
+  .cover :global(img) {
+    width: 100%;
+    max-height: 78vh;
+    min-height: 260px;
+    aspect-ratio: 21 / 9;
+    object-fit: cover;
+  }
+  .text {
+    max-width: var(--measure);
+  }
+
+  .gallery-section {
+    padding-bottom: clamp(3rem, 6vw, 5rem);
+  }
+  .gallery-section h2 {
+    margin-bottom: 1.2rem;
+  }
+  /* A mosaic: every fifth photo spans the full row so the rhythm is not a uniform grid. */
+  .gallery {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.6rem;
+  }
+  .gallery li {
+    grid-column: span 2;
+  }
+  .gallery li:nth-child(5n + 1) {
+    grid-column: span 4;
+  }
+  .gallery li:nth-child(5n + 3),
+  .gallery li:nth-child(5n + 4) {
+    grid-column: span 3;
+  }
+  .gallery li:nth-child(5n + 5) {
+    grid-column: span 6;
+  }
+  .gallery button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    cursor: zoom-in;
+    background: var(--line);
+  }
+  .gallery :global(img) {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+  .gallery li:nth-child(5n + 5) :global(img) {
+    aspect-ratio: 21 / 9;
+  }
+
+  dialog {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    max-width: 100vw;
+    max-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  dialog::backdrop {
+    background: rgb(20 20 50 / 94%);
+  }
+  dialog[open] {
+    display: grid;
+    place-items: center;
+  }
+  dialog img {
+    max-width: min(92vw, 1600px);
+    max-height: 88vh;
+  }
+  .lb-close,
+  .lb-nav {
+    position: absolute;
+    border: 0;
+    background: rgb(255 255 255 / 14%);
+    color: var(--white);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .lb-close:hover,
+  .lb-nav:hover {
+    background: rgb(255 255 255 / 28%);
+  }
+  .lb-close {
+    top: 1.2rem;
+    right: 1.2rem;
+  }
+  .lb-nav {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .lb-prev {
+    left: 1.2rem;
+  }
+  .lb-next {
+    right: 1.2rem;
+  }
+
+  .next {
+    border-top: 1px solid var(--line);
+  }
+  .next a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem 2rem;
+    padding-block: 2rem;
+    text-decoration: none;
+  }
+  .next span {
+    font-family: var(--font-ui);
+    font-weight: 600;
+    color: var(--ink-soft);
+  }
+  .next strong {
+    font-family: var(--font-ui);
+    font-stretch: 125%;
+    font-weight: 800;
+    font-size: clamp(1.7rem, 4vw, 3.2rem);
+    text-transform: uppercase;
+    color: var(--indigo);
+  }
+  .next a:hover strong {
+    color: var(--blue);
+  }
+
+  @media (max-width: 700px) {
+    .gallery {
+      grid-template-columns: 1fr;
+    }
+    .gallery li,
+    .gallery li:nth-child(5n + 1),
+    .gallery li:nth-child(5n + 2),
+    .gallery li:nth-child(5n + 5) {
+      grid-column: auto;
+    }
+    .gallery li:nth-child(5n + 5) :global(img) {
+      aspect-ratio: 3 / 2;
+    }
+  }
+</style>

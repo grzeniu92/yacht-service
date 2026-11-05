@@ -1,0 +1,168 @@
+@import '@fontsource-variable/archivo/wdth.css';
+@import '@fontsource-variable/source-serif-4';
+
+:root {
+  /* Logo indigo as ink, gelcoat white, Baltic water, one signal-flag accent */
+  --indigo: #2d2070;
+  --blue: #2d4d94;
+  --slate: #424a6b;
+  --ink: #23224a;
+  --ink-soft: #55587a;
+  --gelcoat: #f3f6f7;
+  --water: #6f9aa6;
+  --water-deep: #3f6b78;
+  --signal: #f0b323;
+  --signal-deep: #d99d0f;
+  --line: #d5dee2;
+  --white: #fff;
+
+  --font-ui: 'Archivo Variable', 'Arial Narrow', sans-serif;
+  --font-text: 'Source Serif 4 Variable', Georgia, serif;
+
+  --wrap: 1240px;
+  --measure: 62ch;
+  --header-h: 72px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 1rem);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-text);
+  font-size: 1.1875rem;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--gelcoat);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--indigo);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+a:hover {
+  color: var(--blue);
+  text-decoration-thickness: 2px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-ui);
+  color: var(--indigo);
+  margin: 0 0 0.6em;
+}
+
+/* Page titles read like lettering on a transom: wide, heavy, set tight. */
+h1 {
+  font-stretch: 125%;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 6.4vw, 5.4rem);
+  line-height: 1;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+h2 {
+  font-stretch: 100%;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  line-height: 1.2;
+}
+h3 {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+p {
+  margin: 0 0 1.1em;
+}
+
+.wrap {
+  width: min(100% - 2.5rem, var(--wrap));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(3rem, 7vw, 6rem);
+}
+
+.measure {
+  max-width: var(--measure);
+}
+
+.lead {
+  font-size: 1.35rem;
+  line-height: 1.6;
+  max-width: var(--measure);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  border-radius: 2px;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  background: var(--signal);
+  color: var(--indigo);
+  border: 2px solid var(--signal);
+  transition: background-color 0.15s;
+}
+.btn:hover {
+  background: var(--signal-deep);
+  border-color: var(--signal-deep);
+  color: var(--indigo);
+}
+
+.skip {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--indigo);
+  color: var(--white);
+  padding: 0.6rem 1rem;
+  z-index: 100;
+}
+.skip:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.page-head {
+  padding-block: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 3vw, 2.5rem);
+}
+.page-head h1 {
+  margin-bottom: 0.25em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+  }
+}

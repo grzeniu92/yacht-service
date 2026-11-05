@@ -1,0 +1,20 @@
+---
+import ProductList from '../components/ProductList.astro';
+import { ui, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+
+<section class="page-head">
+  <div class="wrap">
+    <h1>{t.ourProducts}</h1>
+  </div>
+</section>
+
+<div class="wrap">
+  <ProductList lang={lang} />
+</div>

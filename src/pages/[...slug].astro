@@ -1,0 +1,81 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Base from '../layouts/Base.astro';
+import Home from '../views/Home.astro';
+import About from '../views/About.astro';
+import Products from '../views/Products.astro';
+import Product from '../views/Product.astro';
+import Partners from '../views/Partners.astro';
+import Contact from '../views/Contact.astro';
+import Subsidies from '../views/Subsidies.astro';
+import {
+  aboutText,
+  langs,
+  pagePath,
+  productDescription,
+  productPath,
+  productTitle,
+  products,
+  routes,
+  subsidies,
+  ui,
+  type Lang,
+  type PageKey,
+  type Product as ProductData,
+} from '../i18n';
+
+interface Props {
+  lang: Lang;
+  page: PageKey | 'product';
+  product?: ProductData;
+}
+
+export const getStaticPaths = (() => {
+  // Must live inside getStaticPaths: Astro hoists it out of the component scope.
+  const toSlug = (path: string) => path.replace(/^\/|\/$/g, '') || undefined;
+  return langs.flatMap((lang) => [
+    ...(Object.keys(routes[lang]) as PageKey[])
+      .filter((page) => page === 'home' || routes[lang][page])
+      .map((page) => ({ params: { slug: toSlug(pagePath(lang, page)) }, props: { lang, page } })),
+    ...products.map((product) => ({
+      params: { slug: toSlug(productPath(lang, product.slug)) },
+      props: { lang, page: 'product' as const, product },
+    })),
+  ]);
+}) satisfies GetStaticPaths;
+
+const { lang, page, product } = Astro.props as Props;
+const t = ui[lang];
+
+/** The same page in every language; pages missing in a language fall back to its home page. */
+const alternates = Object.fromEntries(
+  langs.map((code) => [
+    code,
+    page === 'product'
+      ? productPath(code, product!.slug)
+      : pagePath(code, routes[code][page] ? page : 'home'),
+  ]),
+) as Record<Lang, string>;
+
+const meta: Record<PageKey | 'product', { title: string; description: string }> = {
+  home: { title: t.footerTagline, description: aboutText[lang].paragraphs[0] },
+  about: { title: t.nav.about, description: aboutText[lang].paragraphs[0] },
+  products: { title: t.ourProducts, description: t.categoryBlurb.sailing },
+  partners: { title: t.nav.partners, description: t.partnersIntro },
+  contact: { title: t.nav.contact, description: t.contactIntro },
+  subsidies: { title: subsidies.title, description: subsidies.text },
+  product: product
+    ? { title: productTitle(product, lang), description: productDescription(product, lang)[0] ?? '' }
+    : { title: '', description: '' },
+};
+---
+
+<Base lang={lang} {...meta[page]} alternates={alternates} current={page}>
+  {page === 'home' && <Home lang={lang} />}
+  {page === 'about' && <About lang={lang} />}
+  {page === 'products' && <Products lang={lang} />}
+  {page === 'product' && product && <Product lang={lang} product={product} />}
+  {page === 'partners' && <Partners lang={lang} />}
+  {page === 'contact' && <Contact lang={lang} />}
+  {page === 'subsidies' && <Subsidies />}
+</Base>

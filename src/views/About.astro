@@ -1,0 +1,55 @@
+---
+import { Image } from 'astro:assets';
+import { aboutText, pagePath, products, ui, type Lang } from '../i18n';
+import { photo } from '../lib/photos';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = ui[lang];
+const about = aboutText[lang];
+---
+
+<section class="page-head">
+  <div class="wrap">
+    <h1>{about.heading}</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap layout">
+    <div class="text">
+      {about.paragraphs.map((p, i) => <p class:list={{ lead: i === 0 }}>{p}</p>)}
+      <a class="btn" href={pagePath(lang, 'products')}>{t.ourProducts}</a>
+    </div>
+    <Image
+      src={photo(products.find((p) => p.slug === 'bente-39')!.featured)}
+      alt=""
+      widths={[600, 900, 1200]}
+      sizes="(max-width: 900px) 100vw, 560px"
+    />
+  </div>
+</section>
+
+<style>
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: start;
+  }
+  .layout :global(img) {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+  @media (max-width: 900px) {
+    .layout {
+      grid-template-columns: 1fr;
+    }
+    .layout :global(img) {
+      aspect-ratio: 4 / 3;
+    }
+  }
+</style>
